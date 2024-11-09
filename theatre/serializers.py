@@ -56,7 +56,7 @@ class PlayListSerializer(PlaySerializer):
         fields = ("id", "title", "genres", "actors",)
 
 
-class MovieDetailSerializer(PlaySerializer):
+class PlayDetailSerializer(PlaySerializer):
     genres = GenreSerializer(many=True, read_only=True)
     actors = ActorSerializer(many=True, read_only=True)
 
