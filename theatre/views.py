@@ -10,7 +10,7 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
-from theatre.models import Genre, Actor, TheatreHall, TheatreHall, Performance, Reservation, Play
+from theatre.models import Genre, Actor, TheatreHall, Performance, Reservation, Play
 from theatre.permissions import IsAdminOrIfAuthenticatedReadOnly
 
 from theatre.serializers import (
@@ -74,7 +74,7 @@ class PlayViewSet(
         return [int(str_id) for str_id in qs.split(",")]
 
     def get_queryset(self):
-        """Retrieve the movies with filters"""
+        """Retrieve the play with filters"""
         title = self.request.query_params.get("title")
         genres = self.request.query_params.get("genres")
         actors = self.request.query_params.get("actors")
@@ -117,7 +117,7 @@ class PlayViewSet(
             OpenApiParameter(
                 "title",
                 type=OpenApiTypes.STR,
-                description="Filter by movie title (ex. ?title=fiction)",
+                description="Filter by play title (ex. ?title=fiction)",
             ),
         ]
     )
