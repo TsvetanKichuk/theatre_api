@@ -8,6 +8,7 @@ Install PostgresSQL and create db
     python -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
+    python manage.py loaddata theatre_db_data.json
     set DB_HOST=<your db hostname> 
     set DB_NAME=<your db name> 
     set DB_USER=<your db username> 
