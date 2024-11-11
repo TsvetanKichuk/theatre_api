@@ -27,3 +27,4 @@ Install PostgresSQL and create db
   <li>create user via /api/user/register/</li>
   <li>Get access token via /api/user/token/</li>
 </ul>
+![Снимок экрана 2024-11-11 104638](https://github.com/user-attachments/assets/c66822fa-b78d-45d7-9654-612bf3623fe7)
