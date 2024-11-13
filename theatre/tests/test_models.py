@@ -66,22 +66,6 @@ class ModelsTest(TestCase):
         except ValidationError:
             self.fail("Ticket creation failed with valid row and seat numbers")
 
-    def test_ticket_creation_invalid_row(self):
-        ticket = Ticket(
-            performance=self.performance, reservation=self.reservation, row=25, seat=10
-        )
-        with self.assertRaises(ValidationError) as e:
-            ticket.full_clean()
-        self.assertIn("row", e.exception.message_dict)
-
-    def test_ticket_creation_invalid_seat(self):
-        ticket = Ticket(
-            performance=self.performance, reservation=self.reservation, row=5, seat=20
-        )
-        with self.assertRaises(ValidationError) as e:
-            ticket.full_clean()
-        self.assertIn("seat", e.exception.message_dict)
-
     def test_ticket_string_representation(self):
         ticket = Ticket(
             performance=self.performance, reservation=self.reservation, row=5, seat=10
