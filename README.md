@@ -134,11 +134,12 @@ python manage.py test
 <ul>
     <li>1 Register the bot in @BotFather in telegram app.</li>
     <li>2 Get an access token (API token).</li>
-    <li>3 Install the python-telegram-bot library to interact with the Telegram API:
+    <li>3 Insert CHAT_ID="yours_chat_id" and TELEGRAM_TOKEN="yours_token" in to .env file.</li>
+    <li>4 Install the python-telegram-bot library to interact with the Telegram API:
 ```
 pip install python-telegram-bot
 ```</li>
-    <li>4 Done!</li>
+    <li>5 Done!</li>
 
 
 
