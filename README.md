@@ -130,3 +130,16 @@ To run tests, execute:
 ```in to the terminal
 python manage.py test
 ```
+## Additional function, notifications from telegram bot about creation of new reservation, steps:
+<ul>
+    <li>1 Register the bot in @BotFather in telegram app.</li>
+    <li>2 Get an access token (API token).</li>
+    <li>3 Install the python-telegram-bot library to interact with the Telegram API:
+```
+pip install python-telegram-bot
+```</li>
+    <li>4 Done!</li>
+
+
+
+
